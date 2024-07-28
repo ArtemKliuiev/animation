@@ -5,6 +5,9 @@
 @import './settings/fonts.scss';
 @import './settings/styles.scss';
 
+//background
+@import './styles/background/ellipses.scss';
+
 //base
 @import './styles/base/main.scss';
 @import './styles/base/footer.scss';
@@ -12,7 +15,6 @@
 
 //sections
 @import './styles/sections/top-info.scss';
-@import './styles/background/ellipses.scss';
 @import './styles/sections/keyframe.scss';
 @import './styles/sections/int-observer.scss';
 @import './styles/sections/canvas.scss'
