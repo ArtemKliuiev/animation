@@ -1,0 +1,23 @@
+//settings
+@import './settings/reset.scss';
+@import './settings/mixins.scss';
+@import './settings/variables.scss';
+@import './settings/fonts.scss';
+@import './settings/styles.scss';
+
+//base
+@import './styles/base/main.scss';
+@import './styles/base/footer.scss';
+@import './styles/base/header.scss';
+
+//sections
+@import './styles/sections/top-info.scss';
+@import './styles/background/ellipses.scss';
+@import './styles/sections/keyframe.scss';
+@import './styles/sections/int-observer.scss';
+@import './styles/sections/canvas.scss'
+
+
+
+
+

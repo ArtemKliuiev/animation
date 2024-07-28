@@ -1,0 +1,8 @@
+.main{
+    margin-top: 50px;
+    position: relative;
+    
+    &__wrapper{
+        @include container;
+    }
+}

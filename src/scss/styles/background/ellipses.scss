@@ -1,0 +1,60 @@
+.ellipses{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+
+    &__ellipse{
+        position: absolute;
+
+        &-one{
+            top: 20%;
+            right: 35%;
+            width: 8vh;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            background: $blue;
+
+            @media (max-width: 1024px) {
+                top: 15%;
+                left: 5%;
+            }
+        }
+
+        &-two{
+            right: 5%;
+            width: 15vh;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            background: $orange;
+
+            @media (min-width: 1024px) {
+                bottom: 25%;
+            }
+
+            @media (max-width: 1024px) {
+                top: 15%;
+                right: 5%;
+            }
+        }
+
+        &-three{
+            left: 5%;
+            width: 7vh;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            background: red;
+
+            @media (min-width: 1024px) {
+                top: 55%;
+            }
+
+            @media (max-width: 1024px) {
+                bottom: 15%;
+                left: 5%;
+                width: 8vh;
+            }
+        }
+    }
+}

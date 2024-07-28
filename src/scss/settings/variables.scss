@@ -1,0 +1,26 @@
+// Основні кольори
+$background-color: #ffffff;
+$text-color: #212121;
+$accent-color: #d32f2f;
+
+// Додаткові кольори
+$blue: #0288d1;
+$orange: #ff9800;
+$gray: #bdbdbd;
+$green: #4caf50;
+$dark-orange: #ff5722;
+$purple: #673ab7; 
+$light-purple: #d1c4e9;
+$teal: #009688; 
+$light-teal: #b2dfdb;
+$yellow: #ffeb3b;
+$light-yellow: #fff9c4;
+
+// Градієнти
+$gradient-primary: linear-gradient(135deg, $blue, $accent-color);
+$gradient-secondary: linear-gradient(10deg, $orange, $dark-orange);
+$gradient-success: linear-gradient(135deg, $green, lighten($green, 20%));
+$gradient-border: linear-gradient(135deg, $gray, lighten($gray, 10%)); 
+$gradient-purple: linear-gradient(135deg, $purple, $light-purple);
+$gradient-teal: linear-gradient(135deg, $teal, $light-teal);
+$gradient-yellow: linear-gradient(135deg, $yellow, $light-yellow);

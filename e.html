@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анимация падающих снежинок на Canvas</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #ffffff;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<canvas id="snowCanvas" ></canvas>
+<script>
+    const canvas = document.getElementById('snowCanvas');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const snowflakes = [];
+
+    function Snowflake(x, y, radius, speed) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.speed = speed;
+
+        this.update = function() {
+            this.y += this.speed;
+
+            if (this.y > canvas.height) {
+                this.y = 0;
+                this.x = Math.random() * canvas.width;
+            }
+        };
+
+        this.draw = function() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = 'black';
+            ctx.fill();
+            ctx.closePath();
+        };
+    }
+
+    function createSnowflakes() {
+        const numberOfSnowflakes = 100;
+        for (let i = 0; i < numberOfSnowflakes; i++) {
+            const x = Math.random() * canvas.width;
+            const y = Math.random() * canvas.height;
+            const radius = Math.random() * 3 + 1;
+            const speed = Math.random() * 2 + 1;
+
+            snowflakes.push(new Snowflake(x, y, radius, speed));
+        }
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        snowflakes.forEach(snowflake => {
+            snowflake.update();
+            snowflake.draw();
+        });
+
+        requestAnimationFrame(animate);
+    }
+
+    createSnowflakes();
+    animate();
+
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
+</script>
+</body>
+</html>

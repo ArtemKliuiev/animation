@@ -1,0 +1,42 @@
+.int-observer{
+    min-height: calc(100vh - 50px);
+    margin-bottom: 30px;
+
+    &__title{
+        margin-bottom: 20px;
+    }
+
+    &__main{
+        display: flex;
+        gap: 8%;
+        margin-bottom: 50px;
+
+        @media (max-width: 1024px) {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    &__text{
+        flex: 1 0 46%;
+    }
+
+    &__examples{
+        @include center;
+        flex: 1 0 45%;
+    }
+
+    &__info{
+        h3{
+            margin-bottom: 20px;
+        }
+
+        li{
+            margin-bottom: 10px;
+
+            span{
+                font-weight: 700;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.top-info{
+    position: relative;
+    min-height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__title{
+        text-align: center;
+        font-size: 2.5em;
+        text-transform: uppercase;
+    }
+}
+
